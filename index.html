@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-dark navbar-expand-lg fixed-top pe-lg-3 shadow-sm">
+        <div class="container-fluid">
+            <a class="navbar-brand text-black fw-medium" href="#"><i>Computer Store</i></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
+                aria-label="Toggle navigation">
+                <i class="bi bi-list text-black fs-1"></i>
+            </button>
+            <div class="offcanvas offcanvas-end text-bg-light w-75" tabindex="-1" id="offcanvasDarkNavbar"
+                aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                    <i class="offcanvas-title fs-5" id="offcanvasDarkNavbarLabel">
+                        Computer Store
+                    </i>
+                    <button type="button" class="btn-close btn-close-black" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-center gap-3 flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active text-black fw-medium" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-black fw-medium" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-black fw-medium" href="#">Menu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-black fw-medium" href="#">Contect Us</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex position-relative mt-3 gap-3 mt-lg-0 align-content-center align-items-center"
+                        role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                        <i style="cursor: pointer" class="bi bi-cart-dash-fill text-black fs-4"
+                            data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
+                            aria-controls="offcanvasScrolling"></i>
+                        <span id="cart_count">0</span>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- cart-ocanvas -->
+
+
+    <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+        id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
+                Cart-Items
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <p>Try scrolling the rest of the page to see this option in action.</p>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
