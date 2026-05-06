@@ -9,6 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
@@ -47,7 +48,8 @@
                     </ul>
                     <form class="d-flex position-relative mt-3 gap-3 mt-lg-0 align-content-center align-items-center"
                         role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                        <input id="search-data" class="form-control me-2" type="search" placeholder="Search"
+                            aria-label="Search" />
                         <i style="cursor: pointer" class="bi bi-cart-dash-fill text-black fs-4"
                             data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
                             aria-controls="offcanvasScrolling"></i>
@@ -67,7 +69,22 @@
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
-            <p>Try scrolling the rest of the page to see this option in action.</p>
+
+            <!-- Cart Items -->
+            <div id="cart-items">
+
+                <!-- Item -->
+                
+
+
+            </div>
+
+            <!-- Footer -->
+            <div id="card-sumary">
+                
+            </div>
+
+
         </div>
     </div>
 
@@ -122,236 +139,157 @@
             <button class="btn btn-light px-4">Go To Menu</button>
         </div>
     </div>
-    
+
     <!-- about contents -->
-<div class="about container-fluid py-5">
+    <div class="about container-fluid py-5">
 
-    <!-- title + paragraph -->
-    <div class="title-about mb-5">
-        <h2 class="fw-bold text-center">About Our Computer Store</h2>
-        <p class="mx-auto">
-            Welcome to our Computer Store! We provide high-quality computers, laptops, and accessories 
-            for every need — from gaming enthusiasts to business professionals. Our goal is to deliver 
-            the best technology with affordable prices and excellent customer service.
-        </p>
+        <!-- title + paragraph -->
+        <div class="title-about mb-5">
+            <h2 class="fw-bold text-center">About Our Computer Store</h2>
+            <p class="mx-auto">
+                Welcome to our Computer Store! We provide high-quality computers, laptops, and accessories
+                for every need — from gaming enthusiasts to business professionals. Our goal is to deliver
+                the best technology with affordable prices and excellent customer service.
+            </p>
+        </div>
+
+        <div class="row g-4">
+
+            <!-- card 1 -->
+            <div class="col-12 col-md-4">
+                <div class="about-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrUj4rP94HQMRgHJTL7Xou5DJgehQlJ3CKzQ&s"
+                        alt="">
+                    <div class="about-overlay"></div>
+                    <div class="about-text">
+                        <h4>Gaming</h4>
+                        <p>Uncompromising performance for the ultimate victory.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- card 2 -->
+            <div class="col-12 col-md-4">
+                <div class="about-card">
+                    <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296" alt="">
+                    <div class="about-overlay"></div>
+                    <div class="about-text">
+                        <h4>Business</h4>
+                        <p>Reliability and security for the modern professional.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- card 3 -->
+            <div class="col-12 col-md-4">
+                <div class="about-card">
+                    <img src="https://www.nilkamaledge.com/cdn/shop/articles/Nilkamal_Edge_-_Blog_-_Workstation_Buying_Guide_for_Startups_and_Small_Teams_-_Aug_25_598b5ee9-92dc-47e7-921f-3b5ca38ac69d.jpg?v=1761905772&width=1100"
+                        alt="">
+                    <div class="about-overlay"></div>
+                    <div class="about-text">
+                        <h4>Workstations</h4>
+                        <p>Precision tools for high-end rendering and design.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
-
-    <div class="row g-4">
-
-        <!-- card 1 -->
-        <div class="col-12 col-md-4">
-            <div class="about-card">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrUj4rP94HQMRgHJTL7Xou5DJgehQlJ3CKzQ&s" alt="">
-                <div class="about-overlay"></div>
-                <div class="about-text">
-                    <h4>Gaming</h4>
-                    <p>Uncompromising performance for the ultimate victory.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- card 2 -->
-        <div class="col-12 col-md-4">
-            <div class="about-card">
-                <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296" alt="">
-                <div class="about-overlay"></div>
-                <div class="about-text">
-                    <h4>Business</h4>
-                    <p>Reliability and security for the modern professional.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- card 3 -->
-        <div class="col-12 col-md-4">
-            <div class="about-card">
-                <img src="https://www.nilkamaledge.com/cdn/shop/articles/Nilkamal_Edge_-_Blog_-_Workstation_Buying_Guide_for_Startups_and_Small_Teams_-_Aug_25_598b5ee9-92dc-47e7-921f-3b5ca38ac69d.jpg?v=1761905772&width=1100" alt="">
-                <div class="about-overlay"></div>
-                <div class="about-text">
-                    <h4>Workstations</h4>
-                    <p>Precision tools for high-end rendering and design.</p>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</div>
 
     <!-- menu page -->
-<div class="menu container-fluid p-2 px-3 mt-3">
-    <h2 class=" mb-4">💻 Computer Menu</h2>
+    <div class="menu container-fluid p-2 px-3 mt-3">
+        <h2 class=" mb-4">💻 Computer Menu</h2>
+        <h1 id="txt-found" class=" text-center text-danger-emphasis fw-bold"></h1>
+        <div id="show-product" class="row g-4">
 
-    <div id="show-product" class="row g-4">
 
-        <!-- product 1 -->
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-            <div class="card h-100  border-0 product-card">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTabZTSIAg6s3jBpWS_wbw7HAItu_n3I7-W7A&s"
-                    class="card-img-top" alt="..." />
 
-                <div class="card-body d-flex flex-column">
-                    <h5 class="card-title">ROG Laptop</h5>
-                    <p class="card-text text-muted small">
-                        High performance gaming laptop.
-                    </p>
-
-                    <h6 class="text-primary mb-3">$1200</h6>
-
-                    <button class="btn btn-primary mt-auto w-100">
-                        <i class="bi bi-cart-plus"></i> Add To Cart
-                    </button>
-                </div>
-            </div>
         </div>
-
-        <!-- product 2 -->
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-            <div class="card h-100  border-0 product-card">
-                <img src="https://m.media-amazon.com/images/I/71TPda7cwUL.jpg"
-                    class="card-img-top" alt="..." />
-
-                <div class="card-body d-flex flex-column">
-                    <h5 class="card-title">MacBook Pro</h5>
-                    <p class="card-text text-muted small">
-                        Powerful laptop for developers.
-                    </p>
-
-                    <h6 class="text-primary mb-3">$1800</h6>
-
-                    <button class="btn btn-primary mt-auto w-100">
-                        <i class="bi bi-cart-plus"></i> Add To Cart
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <!-- product 3 -->
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-            <div class="card h-100  border-0 product-card">
-                <img src="https://m.media-amazon.com/images/I/61LtuGzXeaL.jpg"
-                    class="card-img-top" alt="..." />
-
-                <div class="card-body d-flex flex-column">
-                    <h5 class="card-title">Dell XPS</h5>
-                    <p class="card-text text-muted small">
-                        Slim and premium ultrabook.
-                    </p>
-
-                    <h6 class="text-primary mb-3">$1400</h6>
-
-                    <button class="btn btn-primary mt-auto w-100">
-                        <i class="bi bi-cart-plus"></i> Add To Cart
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <!-- product 4 -->
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-            <div class="card h-100  border-0 product-card">
-                <img src="https://m.media-amazon.com/images/I/71jG+e7roXL.jpg"
-                    class="card-img-top" alt="..." />
-
-                <div class="card-body d-flex flex-column">
-                    <h5 class="card-title">HP Pavilion</h5>
-                    <p class="card-text text-muted small">
-                        Affordable everyday laptop.
-                    </p>
-
-                    <h6 class="text-primary mb-3">$900</h6>
-
-                    <button class="btn btn-primary mt-auto w-100">
-                        <i class="bi bi-cart-plus"></i> Add To Cart
-                    </button>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</div>
-
-<!-- app content -->
-<div class="app-section container py-5 text-center">
-
-    <h3 class="fw-bold mb-3">Download Our App</h3>
-    <p class="text-muted mb-4">
-        Get our app for the best shopping experience anytime, anywhere.
-    </p>
-
-    <div class="d-flex justify-content-center align-items-center gap-3 flex-wrap">
-        <img class="store-btn"
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Download_on_the_App_Store_Badge.svg/1280px-Download_on_the_App_Store_Badge.svg.png"
-            alt="App Store">
-
-        <img class="store-btn"
-            src="https://freelogopng.com/images/all_img/1664287128google-play-store-logo-png.png"
-            alt="Google Play">
     </div>
 
-</div>
+    <!-- app content -->
+    <div class="app-section container py-5 text-center">
 
-<!-- Footer -->
-<footer class="bg-dark text-light pt-5 pb-4 mt-5">
-  <div class="container">
-    <div class="row">
-
-      <!-- About -->
-      <div class="col-12 col-md-4 mb-4">
-        <h5 class="mb-3">About Us</h5>
-        <p class="text-secondary">
-          We provide the best e-commerce experience with quality products and fast delivery.
+        <h3 class="fw-bold mb-3">Download Our App</h3>
+        <p class="text-muted mb-4">
+            Get our app for the best shopping experience anytime, anywhere.
         </p>
-      </div>
 
-      <!-- Quick Links -->
-      <div class="col-6 col-md-2 mb-4">
-        <h5 class="mb-3">Links</h5>
-        <ul class="list-unstyled">
-          <li><a href="#" class="text-secondary text-decoration-none">Home</a></li>
-          <li><a href="#" class="text-secondary text-decoration-none">Shop</a></li>
-          <li><a href="#" class="text-secondary text-decoration-none">About</a></li>
-          <li><a href="#" class="text-secondary text-decoration-none">Contact</a></li>
-        </ul>
-      </div>
+        <div class="d-flex justify-content-center align-items-center gap-3 flex-wrap">
+            <img class="store-btn"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Download_on_the_App_Store_Badge.svg/1280px-Download_on_the_App_Store_Badge.svg.png"
+                alt="App Store">
 
-      <!-- Support -->
-      <div class="col-6 col-md-2 mb-4">
-        <h5 class="mb-3">Support</h5>
-        <ul class="list-unstyled">
-          <li><a href="#" class="text-secondary text-decoration-none">FAQ</a></li>
-          <li><a href="#" class="text-secondary text-decoration-none">Help</a></li>
-          <li><a href="#" class="text-secondary text-decoration-none">Terms</a></li>
-          <li><a href="#" class="text-secondary text-decoration-none">Privacy</a></li>
-        </ul>
-      </div>
-
-      <!-- Contact -->
-      <div class="col-12 col-md-4 mb-4">
-        <h5 class="mb-3">Contact</h5>
-        <p class="text-secondary mb-1">Email: support@example.com</p>
-        <p class="text-secondary mb-1">Phone: +855 96 000 0000</p>
-
-        <!-- Social -->
-        <div class="mt-3">
-          <a href="#" class="btn btn-outline-light btn-sm me-2"><i class="bi bi-facebook"></i></a>
-          <a href="#" class="btn btn-outline-light btn-sm me-2"><i class="bi bi-instagram"></i></a>
-          <a href="#" class="btn btn-outline-light btn-sm"><i class="bi bi-telegram"></i></a>
+            <img class="store-btn" src="https://freelogopng.com/images/all_img/1664287128google-play-store-logo-png.png"
+                alt="Google Play">
         </div>
-      </div>
 
     </div>
 
-    <hr class="border-secondary">
+    <!-- Footer -->
+    <footer class="bg-dark text-light pt-5 pb-4 mt-5">
+        <div class="container">
+            <div class="row">
 
-    <!-- Bottom -->
-    <div class="text-center text-secondary">
-      <small>© 2026 Your Website. All Rights Reserved.</small>
-    </div>
-  </div>
-</footer>
+                <!-- About -->
+                <div class="col-12 col-md-4 mb-4">
+                    <h5 class="mb-3">About Us</h5>
+                    <p class="text-secondary">
+                        We provide the best e-commerce experience with quality products and fast delivery.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-6 col-md-2 mb-4">
+                    <h5 class="mb-3">Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-secondary text-decoration-none">Home</a></li>
+                        <li><a href="#" class="text-secondary text-decoration-none">Shop</a></li>
+                        <li><a href="#" class="text-secondary text-decoration-none">About</a></li>
+                        <li><a href="#" class="text-secondary text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div class="col-6 col-md-2 mb-4">
+                    <h5 class="mb-3">Support</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-secondary text-decoration-none">FAQ</a></li>
+                        <li><a href="#" class="text-secondary text-decoration-none">Help</a></li>
+                        <li><a href="#" class="text-secondary text-decoration-none">Terms</a></li>
+                        <li><a href="#" class="text-secondary text-decoration-none">Privacy</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="col-12 col-md-4 mb-4">
+                    <h5 class="mb-3">Contact</h5>
+                    <p class="text-secondary mb-1">Email: support@example.com</p>
+                    <p class="text-secondary mb-1">Phone: +855 96 000 0000</p>
+
+                    <!-- Social -->
+                    <div class="mt-3">
+                        <a href="#" class="btn btn-outline-light btn-sm me-2"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="btn btn-outline-light btn-sm me-2"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="btn btn-outline-light btn-sm"><i class="bi bi-telegram"></i></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <hr class="border-secondary">
+
+            <!-- Bottom -->
+            <div class="text-center text-secondary">
+                <small>© 2026 Your Website. All Rights Reserved.</small>
+            </div>
+        </div>
+    </footer>
 </body>
 
+
 </html>
+<script src="./data.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
     crossorigin="anonymous"></script>
